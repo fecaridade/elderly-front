@@ -20,7 +20,7 @@ const DiasAtividades = ({ onDiaSelecionado }) => {
       <header className="header">
         <img src={headerImage} alt="Header" className="header-image" />
       </header>
-      <div className="background-overlay">
+      <div className="background-overlay-2">
         <h1 className="titulo">Atividades</h1>
         <ul className="dias-lista">
           {dias.map((dia) => (
