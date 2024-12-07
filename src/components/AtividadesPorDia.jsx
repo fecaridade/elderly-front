@@ -10,7 +10,7 @@ const AtividadesPorDia = ({ dia, voltar }) => {
   const [gifUrl, setGifUrl] = useState(null);
 
   useEffect(() => {
-    fetch(`http://localhost:8000/api/atividades/`)
+    fetch(`http://3.88.192.56/api/atividades/`)
       .then((response) => response.json())
       .then((data) => {
         const atividadesDoDia = data.filter((atividade) => atividade.dia_semana === dia);
