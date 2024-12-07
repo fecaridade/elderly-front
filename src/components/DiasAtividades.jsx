@@ -1,23 +1,16 @@
 import React, { useEffect, useState } from "react";
 import headerImage from "../assets/header.jpg"; 
 
-
 const DiasAtividades = ({ onDiaSelecionado }) => {
   const [dias, setDias] = useState([]);
 
-  
-  const ordemDias = ["Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado", "Domingo"];
-
   useEffect(() => {
-    fetch("http://localhost:8000/api/atividades/")
+    fetch("http://3.88.192.56/api/atividades/")
       .then((response) => response.json())
       .then((data) => {
-        
+        // Obtém valores únicos de atividade.dia_semana
         const diasComAtividades = [...new Set(data.map((atividade) => atividade.dia_semana))];
-
-        
-        const diasOrdenados = diasComAtividades.sort((a, b) => ordemDias.indexOf(a) - ordemDias.indexOf(b));
-        setDias(diasOrdenados);
+        setDias(diasComAtividades);
       })
       .catch((error) => console.error("Erro ao buscar atividades:", error));
   }, []);
@@ -28,7 +21,7 @@ const DiasAtividades = ({ onDiaSelecionado }) => {
         <img src={headerImage} alt="Header" className="header-image" />
       </header>
       <div className="background-overlay">
-        <h1 className="titulo">Treino Semanal</h1>
+        <h1 className="titulo">Atividades</h1>
         <ul className="dias-lista">
           {dias.map((dia) => (
             <li

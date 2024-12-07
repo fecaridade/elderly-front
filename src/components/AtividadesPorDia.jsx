@@ -54,10 +54,11 @@ const AtividadesPorDia = ({ dia, voltar }) => {
     <div className="dias-container">
       <header className="header">
         <img src={headerImage} alt="Header" className="header-image" />
-        <button className="voltar-btn" onClick={voltar}>
+        
+      </header>
+      <button className="voltar-btn" onClick={voltar}>
           Voltar
         </button>
-      </header>
       <div className="background-overlay">
         <div className="cronometro-container">
           <div className="cronometro">{formatarTempo(tempo)}</div>
