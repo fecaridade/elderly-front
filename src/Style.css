@@ -19,7 +19,7 @@ body {
   cursor: pointer;
   font-size: 1rem;
   position: absolute;
-  left: 5px;
+  left: 0px;
   top: 20px;
   z-index: 10;
 }
@@ -136,26 +136,24 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 1rem 0;
 }
 
 .cronometro {
   background-color:rgba(70, 122, 224, 0.8);
   color: white;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: bold;
   padding: 1rem 2rem;
   border-radius: 8px;
   text-align: center;
   width: 200px;
-  height: 30px;
+  right: 10px;
 }
 
 .iniciar-btn {
   width: 100%;
   height: 3rem;
   display: block;
-  margin: 2rem auto;
   padding: 0.5rem 1.5rem;
   border: none;
   border-radius: 8px;
@@ -178,7 +176,7 @@ body {
   }
 
   .titulo {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 
   .dia-item {
